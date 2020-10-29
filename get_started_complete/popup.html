@@ -3,14 +3,21 @@
   <head>
     <style>
       button {
-        height: 30px;
+        height: 50px;
         width: 30px;
         outline: none;
       }
     </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   </head>
   <body>
-    <button id="changeColor"></button>
+    <h1>Motivation Timer</h1>
+    <form id="timer">
+      <input id="number" type="number" placeholder="Add a time..."></input>
+      <input type="submit" value="Submit" class="btn" />
+    </form>
+    <ul id="list"></ul>
+    
     <script src="popup.js"></script>
   </body>
 </html>
