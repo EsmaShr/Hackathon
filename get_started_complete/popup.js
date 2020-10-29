@@ -527,13 +527,24 @@ const quotes = [
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
-  console.log('hello');
-  console.log(number.value);
   const list = document.getElementById('list');
-  const array = quotes.slice(0, number.value);
+  const randomNum = Math.floor(Math.random()*100);
+  const array = quotes.splice(randomNum, (number.value));
   for (let i = 0; i <= array.length; i++) {
+    const NEW_LINE = "\r\n"
+    const br = document.createElement('br')
     const li = document.createElement('li');
-    li.innerText = array[i].text;
+    li.innerText = array[i].text; 
+    li.setAttribute('class','quoteText')
     list.appendChild(li);
+    const author = document.createElement('li');
+    if(array[i] == null){
+      author.innerText = ' - ' + 'He who must not be named' + NEW_LINE
+    }
+    else{author.innerText = ' - ' + array[i].author + NEW_LINE;}
+    li.setAttribute('class','authorText');
+    list.appendChild(author);
+    list.appendChild(br);
+
   }
 });

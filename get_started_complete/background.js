@@ -19,7 +19,7 @@ chrome.runtime.onInstalled.addListener(function () {
       {
         conditions: [
           new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { hostContains: '.com' },
+            pageUrl: { hostContains: ['.com','.io']},
           }),
         ],
         actions: [new chrome.declarativeContent.ShowPageAction()],

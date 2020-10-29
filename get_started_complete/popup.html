@@ -6,17 +6,58 @@
         height: 50px;
         width: 30px;
         outline: none;
+        text-align: center;
       }
+      body{
+        height: 180px;
+        width: 400px;
+        text-align: center;
+        background-color: peachpuff
+      }
+     #container{
+       background-color: rebeccapurple;
+     }
+      h1{
+        font: italic bold 30px Georgia,serif;
+        text-align: center;
+        padding-bottom: .4em;
+      }
+
+      #header-text{
+        color: yellow;
+      }
+      #number{
+        margin-left: 2em;
+      }
+      li{
+        list-style: none;
+        color: rgb(221, 161, 50);
+      }
+      .quoteText{
+        font: italic bold 30px Georgia,serif;
+
+      }
+      .authorText{
+        font: italic 20px Georgia,serif;
+        color: orange
+      }
+      ul cite{
+            color: black;
+       }
+       
     </style>
   </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <body>
-    <h1>Motivation Timer</h1>
+    <div id='container'>
+    <h1 id="header-text">How motivated do you want to be?</h1>
     <form id="timer">
-      <input id="number" type="number" placeholder="Add a time..."></input>
-      <input type="submit" value="Submit" class="btn" />
+      <input id="number" class="shadow p-1 bg-white rounded" type="number" placeholder="Postive number for positivity" style="width: 250px"></input>
+      <input type="submit" value="Submit" class="btn btn-primary" />
     </form>
+    <br></br>
     <ul id="list"></ul>
-    
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>
